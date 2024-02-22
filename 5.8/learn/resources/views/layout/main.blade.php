@@ -3,7 +3,7 @@
 use App\Menu;
 
 $menu = Menu::all();
-$title = $__env->yieldContent('title');
+$active = $__env->yieldContent('active');
 
 ?>
 <!doctype html>
@@ -31,7 +31,7 @@ $title = $__env->yieldContent('title');
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           @foreach( $menu as $m )
-          @if( $m->name != $title )
+          @if( $m->name != $active )
           <a class="nav-item nav-link text-capitalize" href="{{ url('/'.$m->name) }}">{{$m->name}}</a>
           @else
           <a class="nav-item nav-link text-capitalize active" href="{{ url('/'.$m->name) }}">{{$m->name}}</a>

@@ -2,7 +2,8 @@
 <!-- section dan yield saling sambung -->
 <!-- yield variable -->
 <!-- section isi untuk isi variable (yield) -->
-@section('title', 'home')
+@section('title', 'Home')
+@section('active', 'home')
 
 @section('container')
 <div class="container">

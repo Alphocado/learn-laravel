@@ -30,10 +30,15 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/home', 'PagesController@home');
+
 Route::get('/about', 'PagesController@about');
 
 Route::get('/mahasiswa', 'MahasiswaController@index');
 
 // Students
 Route::get('/students', 'StudentsController@index');
+Route::get('/students/create', 'StudentsController@create');
 Route::get('/students/{student}', 'StudentsController@show');
+// ini karena di create kan ada kirim data pakai post jadi kekirim ke sini
+// jika method route nya post maka akan masuk ke sini 
+Route::post('/students', 'StudentsController@store');

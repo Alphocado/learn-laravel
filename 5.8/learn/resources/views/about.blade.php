@@ -1,5 +1,6 @@
 @extends('layout/main')
-@section('title', 'about')
+@section('title', 'About')
+@section('active', 'about')
 
 @section('container')
 <div class="container">
