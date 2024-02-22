@@ -36,6 +36,12 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
+        // validasi
+        $request->validate([
+            'nama' => 'required',
+            'nrp' => 'required|size:9',
+
+        ]);
         // old way
         // $student = new Student;
         // $student->nama = $request->nama;
