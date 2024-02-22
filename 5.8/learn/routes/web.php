@@ -51,3 +51,8 @@ Route::post('/students', 'StudentsController@store');
 // jika memasuki link dibawah ini melalui submit (post)
 // maka akan memunculkan halaman baru
 Route::delete('/students/{student}', 'StudentsController@destroy');
+
+
+// edit
+Route::get('/students/{student}/edit', 'StudentsController@edit');
+Route::patch('/students/{student}', 'StudentsController@update');
