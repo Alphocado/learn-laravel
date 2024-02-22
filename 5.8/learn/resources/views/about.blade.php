@@ -1,5 +1,5 @@
 @extends('layout/main')
-@section('title', 'About Me')
+@section('title', 'About')
 
 @section('container')
 <div class="container">

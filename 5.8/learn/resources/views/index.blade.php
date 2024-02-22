@@ -2,7 +2,7 @@
 <!-- section dan yield saling sambung -->
 <!-- yield variable -->
 <!-- section isi untuk isi variable (yield) -->
-@section('title', 'Laravel Work')
+@section('title', 'Home')
 
 @section('container')
 <div class="container">

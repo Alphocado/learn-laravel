@@ -12,18 +12,23 @@
 */
 
 // root
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-// about
-Route::get('/about', function () {
-    $nama = 'Udin Samsudin';
-    // bagian ke dua dari view adalah parameter untuk input data
-    return view('about', ['nama' => $nama]);
-});
+// // about
+// Route::get('/about', function () {
+//     $nama = 'Udin Samsudin';
+//     // bagian ke dua dari view adalah parameter untuk input data
+//     return view('about', ['nama' => $nama]);
+// });
 
-// Mahasiswa
-Route::get('/mahasiswa', function () {
-    return view('mahasiswa');
-});
+// // Mahasiswa
+// Route::get('/mahasiswa', function () {
+//     return view('mahasiswa');
+// });
+
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+
+Route::get('/mahasiswa', 'MahasiswaController@index');
