@@ -61,7 +61,7 @@ class StudentsController extends Controller
 
         // smart way
         Student::create($request->all());
-        return redirect('/students')->with('status', 'Data Mahasiswa Berhasil ditambahkan');
+        return redirect('/students')->with('status', 'Data Mahasiswa Berhasil Ditambahkan!');
     }
 
     /**
@@ -106,6 +106,7 @@ class StudentsController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        Student::destroy($student->id);
+        return redirect('/students')->with('status', 'Data Mahasiswa Berhasil Dihapus');
     }
 }

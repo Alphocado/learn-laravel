@@ -36,9 +36,18 @@ Route::get('/about', 'PagesController@about');
 Route::get('/mahasiswa', 'MahasiswaController@index');
 
 // Students
+// menampilkan semua data siswa
 Route::get('/students', 'StudentsController@index');
+// membuat data siswa
 Route::get('/students/create', 'StudentsController@create');
+// menampilkan data spesifik (detail)
+// jika semisal masuk ke link dibawah ini melalui url/link (get)
+// maka akan munculkan data siswa
 Route::get('/students/{student}', 'StudentsController@show');
+
 // ini karena di create kan ada kirim data pakai post jadi kekirim ke sini
 // jika method route nya post maka akan masuk ke sini 
 Route::post('/students', 'StudentsController@store');
+// jika memasuki link dibawah ini melalui submit (post)
+// maka akan memunculkan halaman baru
+Route::delete('/students/{student}', 'StudentsController@destroy');
